@@ -48,13 +48,15 @@ namespace Day1_HistorianHysteria
         {
             //Extract dropped file name
             string fname = ((string[])e.Data.GetData(DataFormats.FileDrop)).First();
-            int totalDistance = 0;                             //Total distance between the 2 lists
-            int similarityScore = 0;
-            Dictionary<int, int> rightListOccurances = new Dictionary<int, int>();
-            HashSet<int> rightListUniqueValues = new HashSet<int>();
+            int totalDistance = 0;                                                          //Total distance between the 2 lists
+            int similarityScore = 0;                                                        //Similarity score between the two lists
+            Dictionary<int, int> rightListOccurances = new Dictionary<int, int>();          //How often each right list value appears in the right list
+            HashSet<int> rightListUniqueValues = new HashSet<int>();                        //Unique right list values
 
-            //Restart and previous runs
-            stopwatch.Restart();
+            //Reset previous runs
+            stopwatch.Reset();
+            leftList.Clear();
+            rightList.Clear();
 
             try
             {
@@ -67,14 +69,11 @@ namespace Day1_HistorianHysteria
                     leftList.Add(Convert.ToInt32(line.Split(' ')[0]));
                     rightList.Add(rightListValue);
 
+                    //Get the count of all the right list value occurances
                     if (rightListUniqueValues.Add(rightListValue))
-                    {
                         rightListOccurances.Add(rightListValue, 1);
-                    }
                     else
-                    {
                         rightListOccurances[rightListValue]++;
-                    }
                 }
 
                 leftList.Sort();
@@ -92,7 +91,7 @@ namespace Day1_HistorianHysteria
                 stopwatch.Stop();
 
                 //Output values
-                UI_TimeTaken_Lbl.Text = $"Time taken: {stopwatch.ElapsedMilliseconds} ms";
+                UI_TimeTaken_Lbl.Text = $"Time taken: {stopwatch.ElapsedTicks * (1.0 / Stopwatch.Frequency) * 1000} ms";
                 UI_TotalDistance_Tbx.Text = totalDistance.ToString();
                 UI_SimilarityScore_Tbx.Text = similarityScore.ToString();
 
