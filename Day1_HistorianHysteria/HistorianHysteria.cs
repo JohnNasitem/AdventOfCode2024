@@ -1,4 +1,12 @@
-﻿using System;
+﻿//***********************************************************************************
+//Program: HistorianHysteria.cs          
+//Description: Extract two lists from the input and get the total distance between the two lists
+//Date: Dec. 1/2024
+//Author: John Nasitem
+//Advent of Code 2024 Challenge - Day 1
+//***********************************************************************************
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,25 +22,42 @@ namespace Day1_HistorianHysteria
 {
     public partial class HistorianHysteria : Form
     {
-        List<int> leftList = new List<int>();
-        List<int> rightList = new List<int>();
-        Stopwatch stopwatch = new Stopwatch();
+        //Defining varaibles
+        List<int> leftList = new List<int>();               //To compare with right list and get the distance between
+        List<int> rightList = new List<int>();              //To compare with left list and get the distance between
+        Stopwatch stopwatch = new Stopwatch();              //Check how long it took to get the distance
 
+
+
+        /// <summary>
+        /// Initializes a new instance of the HistorianHysteria class
+        /// </summary>
         public HistorianHysteria()
         {
             InitializeComponent();
         }
 
+
+
+        /// <summary>
+        /// Extract the two lists from a text file and get the total distance between the lists
+        /// </summary>
+        /// <param name="sender">Object that called the code</param>
+        /// <param name="e">Event args</param>
         private void UI_DragDropSection_Lbl_DragDrop(object sender, DragEventArgs e)
         {
+            //Extract dropped file name
             string fname = ((string[])e.Data.GetData(DataFormats.FileDrop)).First();
-            long totalDistance = 0;
+            long totalDistance = 0;                             //Total distance between the 2 lists
+
+            //Restart and previous runs
             stopwatch.Restart();
 
             try
             {
                 stopwatch.Start();
 
+                //Extract list values
                 foreach (string line in File.ReadAllLines(fname))
                 {
                     leftList.Add(Convert.ToInt32(line.Split(' ')[0]));
@@ -42,11 +67,13 @@ namespace Day1_HistorianHysteria
                 leftList.Sort();
                 rightList.Sort();
 
+                //Compare lowest values from each list list then seconding lowest and so on
                 for (int i = 0; i < leftList.Count; i++)
                     totalDistance += Math.Abs(leftList[i] - rightList[i]);
 
                 stopwatch.Stop();
 
+                //Output values
                 UI_TimeTaken_Lbl.Text = $"Time taken: {stopwatch.ElapsedMilliseconds} ms";
                 UI_Output_Tbx.Text = totalDistance.ToString();
 
@@ -58,6 +85,13 @@ namespace Day1_HistorianHysteria
             }
         }
 
+
+
+        /// <summary>
+        /// Allow drop effect
+        /// </summary>
+        /// <param name="sender">Object that called the code</param>
+        /// <param name="e">Event args</param>
         private void UI_DragDropSection_Lbl_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
