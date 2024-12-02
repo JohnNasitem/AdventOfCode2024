@@ -1,0 +1,13 @@
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\bin\Debug\Day2_Red-NosedReports.exe.config
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\bin\Debug\Day2_Red-NosedReports.exe
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\bin\Debug\Day2_Red-NosedReports.pdb
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\bin\Debug\DottedLabel.dll
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\bin\Debug\DottedLabel.pdb
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\obj\Debug\Day2_Red-NosedReports.csproj.AssemblyReference.cache
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\obj\Debug\Day2_Red_NosedReports.Properties.Resources.resources
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\obj\Debug\Day2_Red_NosedReports.RedNosedReports.resources
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\obj\Debug\Day2_Red-NosedReports.csproj.GenerateResource.cache
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\obj\Debug\Day2_Red-NosedReports.csproj.CoreCompileInputs.cache
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\obj\Debug\Day2_Red.0C90A35E.Up2Date
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\obj\Debug\Day2_Red-NosedReports.exe
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day2_Red-NosedReports\obj\Debug\Day2_Red-NosedReports.pdb

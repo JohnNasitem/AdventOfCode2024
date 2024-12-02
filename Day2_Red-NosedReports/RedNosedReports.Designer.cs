@@ -31,6 +31,7 @@
             this.UI_DragDropSection_Lbl = new DottedLabel.DottedLabel();
             this.UI_SafeReportCountLabel_Lbl = new System.Windows.Forms.Label();
             this.UI_SafeReportsCount_Tbx = new System.Windows.Forms.TextBox();
+            this.UI_TimeTaken_Lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // UI_DragDropSection_Lbl
@@ -70,11 +71,23 @@
             this.UI_SafeReportsCount_Tbx.Size = new System.Drawing.Size(123, 27);
             this.UI_SafeReportsCount_Tbx.TabIndex = 2;
             // 
+            // UI_TimeTaken_Lbl
+            // 
+            this.UI_TimeTaken_Lbl.AutoSize = true;
+            this.UI_TimeTaken_Lbl.BackColor = System.Drawing.SystemColors.Control;
+            this.UI_TimeTaken_Lbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UI_TimeTaken_Lbl.Location = new System.Drawing.Point(302, 422);
+            this.UI_TimeTaken_Lbl.Name = "UI_TimeTaken_Lbl";
+            this.UI_TimeTaken_Lbl.Size = new System.Drawing.Size(177, 19);
+            this.UI_TimeTaken_Lbl.TabIndex = 3;
+            this.UI_TimeTaken_Lbl.Text = "Time Taken: Unknown";
+            // 
             // RedNosedReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.UI_TimeTaken_Lbl);
             this.Controls.Add(this.UI_SafeReportsCount_Tbx);
             this.Controls.Add(this.UI_SafeReportCountLabel_Lbl);
             this.Controls.Add(this.UI_DragDropSection_Lbl);
@@ -90,6 +103,7 @@
         private DottedLabel.DottedLabel UI_DragDropSection_Lbl;
         private System.Windows.Forms.Label UI_SafeReportCountLabel_Lbl;
         private System.Windows.Forms.TextBox UI_SafeReportsCount_Tbx;
+        private System.Windows.Forms.Label UI_TimeTaken_Lbl;
     }
 }
 
