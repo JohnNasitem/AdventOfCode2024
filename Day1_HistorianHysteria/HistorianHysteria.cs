@@ -48,7 +48,10 @@ namespace Day1_HistorianHysteria
         {
             //Extract dropped file name
             string fname = ((string[])e.Data.GetData(DataFormats.FileDrop)).First();
-            long totalDistance = 0;                             //Total distance between the 2 lists
+            int totalDistance = 0;                             //Total distance between the 2 lists
+            int similarityScore = 0;
+            Dictionary<int, int> rightListOccurances = new Dictionary<int, int>();
+            HashSet<int> rightListUniqueValues = new HashSet<int>();
 
             //Restart and previous runs
             stopwatch.Restart();
@@ -60,8 +63,18 @@ namespace Day1_HistorianHysteria
                 //Extract list values
                 foreach (string line in File.ReadAllLines(fname))
                 {
+                    int rightListValue = Convert.ToInt32(line.Split(' ')[3]);
                     leftList.Add(Convert.ToInt32(line.Split(' ')[0]));
-                    rightList.Add(Convert.ToInt32(line.Split(' ')[3]));
+                    rightList.Add(rightListValue);
+
+                    if (rightListUniqueValues.Add(rightListValue))
+                    {
+                        rightListOccurances.Add(rightListValue, 1);
+                    }
+                    else
+                    {
+                        rightListOccurances[rightListValue]++;
+                    }
                 }
 
                 leftList.Sort();
@@ -69,13 +82,19 @@ namespace Day1_HistorianHysteria
 
                 //Compare lowest values from each list list then seconding lowest and so on
                 for (int i = 0; i < leftList.Count; i++)
+                {
                     totalDistance += Math.Abs(leftList[i] - rightList[i]);
+                    
+                    if (rightListOccurances.ContainsKey(leftList[i]))
+                        similarityScore += leftList[i] * rightListOccurances[leftList[i]];
+                }
 
                 stopwatch.Stop();
 
                 //Output values
                 UI_TimeTaken_Lbl.Text = $"Time taken: {stopwatch.ElapsedMilliseconds} ms";
-                UI_Output_Tbx.Text = totalDistance.ToString();
+                UI_TotalDistance_Tbx.Text = totalDistance.ToString();
+                UI_SimilarityScore_Tbx.Text = similarityScore.ToString();
 
             }
             catch

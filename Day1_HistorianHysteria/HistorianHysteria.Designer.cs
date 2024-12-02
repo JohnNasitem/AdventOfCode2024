@@ -33,8 +33,10 @@
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.UI_OutputLabel_Lbl = new System.Windows.Forms.Label();
             this.UI_DragDropSection_Lbl = new DottedLabel.DottedLabel();
-            this.UI_Output_Tbx = new System.Windows.Forms.TextBox();
+            this.UI_TotalDistance_Tbx = new System.Windows.Forms.TextBox();
             this.UI_TimeTaken_Lbl = new System.Windows.Forms.Label();
+            this.UI_SimilarityScore_Tbx = new System.Windows.Forms.TextBox();
+            this.UI_SimilarityScoreLabel_Lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // UI_OutputLabel_Lbl
@@ -65,33 +67,55 @@
             this.UI_DragDropSection_Lbl.DragDrop += new System.Windows.Forms.DragEventHandler(this.UI_DragDropSection_Lbl_DragDrop);
             this.UI_DragDropSection_Lbl.DragEnter += new System.Windows.Forms.DragEventHandler(this.UI_DragDropSection_Lbl_DragEnter);
             // 
-            // UI_Output_Tbx
+            // UI_TotalDistance_Tbx
             // 
-            this.UI_Output_Tbx.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UI_Output_Tbx.Location = new System.Drawing.Point(137, 418);
-            this.UI_Output_Tbx.Name = "UI_Output_Tbx";
-            this.UI_Output_Tbx.ReadOnly = true;
-            this.UI_Output_Tbx.Size = new System.Drawing.Size(119, 27);
-            this.UI_Output_Tbx.TabIndex = 3;
+            this.UI_TotalDistance_Tbx.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UI_TotalDistance_Tbx.Location = new System.Drawing.Point(137, 418);
+            this.UI_TotalDistance_Tbx.Name = "UI_TotalDistance_Tbx";
+            this.UI_TotalDistance_Tbx.ReadOnly = true;
+            this.UI_TotalDistance_Tbx.Size = new System.Drawing.Size(119, 27);
+            this.UI_TotalDistance_Tbx.TabIndex = 3;
             // 
             // UI_TimeTaken_Lbl
             // 
             this.UI_TimeTaken_Lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.UI_TimeTaken_Lbl.AutoSize = true;
             this.UI_TimeTaken_Lbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UI_TimeTaken_Lbl.Location = new System.Drawing.Point(262, 421);
+            this.UI_TimeTaken_Lbl.Location = new System.Drawing.Point(510, 422);
             this.UI_TimeTaken_Lbl.Name = "UI_TimeTaken_Lbl";
             this.UI_TimeTaken_Lbl.Size = new System.Drawing.Size(177, 19);
             this.UI_TimeTaken_Lbl.TabIndex = 4;
             this.UI_TimeTaken_Lbl.Text = "Time Taken: Unknown";
+            // 
+            // UI_SimilarityScore_Tbx
+            // 
+            this.UI_SimilarityScore_Tbx.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UI_SimilarityScore_Tbx.Location = new System.Drawing.Point(385, 418);
+            this.UI_SimilarityScore_Tbx.Name = "UI_SimilarityScore_Tbx";
+            this.UI_SimilarityScore_Tbx.ReadOnly = true;
+            this.UI_SimilarityScore_Tbx.Size = new System.Drawing.Size(119, 27);
+            this.UI_SimilarityScore_Tbx.TabIndex = 6;
+            // 
+            // UI_SimilarityScoreLabel_Lbl
+            // 
+            this.UI_SimilarityScoreLabel_Lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UI_SimilarityScoreLabel_Lbl.AutoSize = true;
+            this.UI_SimilarityScoreLabel_Lbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UI_SimilarityScoreLabel_Lbl.Location = new System.Drawing.Point(260, 422);
+            this.UI_SimilarityScoreLabel_Lbl.Name = "UI_SimilarityScoreLabel_Lbl";
+            this.UI_SimilarityScoreLabel_Lbl.Size = new System.Drawing.Size(129, 19);
+            this.UI_SimilarityScoreLabel_Lbl.TabIndex = 5;
+            this.UI_SimilarityScoreLabel_Lbl.Text = "Similarity Score ";
             // 
             // HistorianHysteria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.UI_SimilarityScore_Tbx);
+            this.Controls.Add(this.UI_SimilarityScoreLabel_Lbl);
             this.Controls.Add(this.UI_TimeTaken_Lbl);
-            this.Controls.Add(this.UI_Output_Tbx);
+            this.Controls.Add(this.UI_TotalDistance_Tbx);
             this.Controls.Add(this.UI_OutputLabel_Lbl);
             this.Controls.Add(this.UI_DragDropSection_Lbl);
             this.Name = "HistorianHysteria";
@@ -107,8 +131,10 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
         private DottedLabel.DottedLabel UI_DragDropSection_Lbl;
         private System.Windows.Forms.Label UI_OutputLabel_Lbl;
-        private System.Windows.Forms.TextBox UI_Output_Tbx;
+        private System.Windows.Forms.TextBox UI_TotalDistance_Tbx;
         private System.Windows.Forms.Label UI_TimeTaken_Lbl;
+        private System.Windows.Forms.TextBox UI_SimilarityScore_Tbx;
+        private System.Windows.Forms.Label UI_SimilarityScoreLabel_Lbl;
     }
 }
 
