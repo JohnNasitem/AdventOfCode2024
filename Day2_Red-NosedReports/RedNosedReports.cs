@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Day2_Red_NosedReports
 {
-    public partial class Form1 : Form
+    public partial class RedNosedReports : Form
     {
-        public Form1()
+        public RedNosedReports()
         {
             InitializeComponent();
         }
