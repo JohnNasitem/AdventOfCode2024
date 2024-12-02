@@ -51,13 +51,18 @@ namespace Day2_Red_NosedReports
                 {
                     int previousLevel = -1;                                         //Previous level to comapare current level to
                     bool isIncreasing = true;                                       //If the previous adjacent levels were increasing or decreasing
-                    string[] levels = report.Split(' ');                            //All the levels in the report
+                    List<int> levels = report.Split(' ').Select(int.Parse).ToList();                           //All the levels in the report
+                    bool isFirstUnsafeLevel = true;
+
+                    Console.WriteLine("-------------------------------------------------------");
+                    Console.WriteLine($"Checking Report: \t{report}");
 
                     //Iterate over the levels making sure they are all going in the same direction and have a the correct difference between levels
-                    for (int i = 0; i < levels.Length; i++)
+                    for (int i = 0; i < levels.Count; i++)
                     {
-                        int currentLevel = Convert.ToInt32(levels[i]);
+                        int currentLevel = levels[i];
                         int usedPreviousLevel = previousLevel;
+                        bool didLevelGetRemoved  = false;
 
                         //Set up for next level
                         previousLevel = currentLevel;
@@ -66,27 +71,90 @@ namespace Day2_Red_NosedReports
                         if (usedPreviousLevel == -1)
                         {
                             //Prep isIncreasing for the next level
-                            isIncreasing = currentLevel < Convert.ToInt32(levels[i + 1]);
+                            isIncreasing = currentLevel < levels[i + 1];
                             continue;
                         }
 
-                        //2 adjacent levels need to differ by at least 1 and at most 3, if not then its unsafe
-                        if (Math.Abs(currentLevel - usedPreviousLevel) > 3 || Math.Abs(currentLevel - usedPreviousLevel) == 0)
-                            break;
+                            //2 adjacent levels need to differ by at least 1 and at most 3, if not then its unsafe
+                        if (Math.Abs(currentLevel - usedPreviousLevel) > 3 || Math.Abs(currentLevel - usedPreviousLevel) == 0 ||
+                            //If these 2 adjacent levels are increasing but the previous adjacents were decreasing then report is unsafe
+                            (usedPreviousLevel < currentLevel && !isIncreasing) ||
+                            //If these 2 adjacent levels are decreasing but the previous adjacents were increasing then report is unsafe
+                            (usedPreviousLevel > currentLevel && isIncreasing))
+                        {
+                            if (Math.Abs(currentLevel - usedPreviousLevel) > 3)
+                            {
+                                Console.WriteLine($"Error: Difference is {Math.Abs(currentLevel - usedPreviousLevel)}");
+                            }
+                            else if (Math.Abs(currentLevel - usedPreviousLevel) == 0)
+                            {
+                                Console.WriteLine($"Error: Difference is 0");
+                            }
+                            else if (usedPreviousLevel < currentLevel && !isIncreasing)
+                            {
+                                Console.WriteLine($"Error: Adjacent is increasing, but previous were decreasing");
+                            }
+                            else if (usedPreviousLevel > currentLevel && isIncreasing)
+                            {
+                                Console.WriteLine($"Error: Adjacent is decreasing, but previous were increasing");
+                            }
 
-                        //If these 2 adjacent levels are increasing but the previous adjacents were decreasing then report is unsafe
-                        if (usedPreviousLevel < currentLevel && !isIncreasing)
-                            break;
-                        //If these 2 adjacent levels are decreasing but the previous adjacents were increasing then report is unsafe
-                        else if (usedPreviousLevel > currentLevel && isIncreasing)
-                            break;
+                            if (isFirstUnsafeLevel)
+                            {
+                                isFirstUnsafeLevel = false;
+                                Console.WriteLine($"Removing - {levels[i]}, at index {i}");
+                                levels.RemoveAt(i);
+
+                                if (i == levels.Count)
+                                {
+                                    i = levels.Count - 1;
+                                } else
+                                {
+                                    if (i - 1 < 0)
+                                    {
+                                        i = 0;
+                                    }
+                                    else
+                                    {
+                                        i--;
+                                    }
+
+                                    previousLevel = usedPreviousLevel;
+                                }
+                                Console.WriteLine($"Rewound back to: {i}, after i++ its {i + 1}, new previous: {previousLevel}");
+                                didLevelGetRemoved = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine($"New Report: \t\t{string.Join(" ", levels)}");
+                                Console.WriteLine("Safety: Unsafe");
+
+                                //FOund 1 problem
+                                //If bad level is the very first, it wont be removed causing whole report to be unsafe
+                                //
+                                //
+                                //Find a way to either redo the entire check without the first level or idk
+                                //maybe turn the check into a method
+                                //
+                                //
+                                //
+                                //
+                                //
+                                break;
+                            }
+                        }
 
                         //Save adjacent direction
-                        isIncreasing = usedPreviousLevel < currentLevel;
+                        if (!didLevelGetRemoved)
+                            isIncreasing = usedPreviousLevel < currentLevel;
 
                         //If the report reached the last level without finding a fault then it is safe
-                        if (i == levels.Length - 1)
+                        if (i == levels.Count - 1)
+                        {
+                            Console.WriteLine($"New Report: \t\t{string.Join(" ", levels)}");
+                            Console.WriteLine("Safety: Safe");
                             safeReportCount++;
+                        }
                     }
                 }
 
