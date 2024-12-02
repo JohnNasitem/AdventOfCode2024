@@ -4,6 +4,8 @@
 //Date: Dec. 1/2024
 //Author: John Nasitem
 //Advent of Code 2024 Challenge - Day 1
+//https://adventofcode.com/2024/day/1
+//https://adventofcode.com/2024/day/1#part2
 //***********************************************************************************
 
 using System;
