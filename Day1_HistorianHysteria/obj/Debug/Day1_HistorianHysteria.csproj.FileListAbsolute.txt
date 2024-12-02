@@ -1,0 +1,10 @@
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_HistorianHysteria.csproj.AssemblyReference.cache
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_HistorianHysteria.HistorianHysteria.resources
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_HistorianHysteria.Properties.Resources.resources
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_HistorianHysteria.csproj.GenerateResource.cache
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_HistorianHysteria.csproj.CoreCompileInputs.cache
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\bin\Debug\Day1_HistorianHysteria.exe.config
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\bin\Debug\Day1_HistorianHysteria.exe
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\bin\Debug\Day1_HistorianHysteria.pdb
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_HistorianHysteria.exe
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_HistorianHysteria.pdb

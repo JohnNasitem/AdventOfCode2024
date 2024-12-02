@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DottedLabel\DottedLabel.csproj">
+      <Project>{DC2EDC1D-6A8C-4843-A9CA-B34B96D229A4}</Project>
+      <Name>DottedLabel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
