@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day1_HistorianHysteria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC2EDC1D-6A8C-4843-A9CA-B34B96D229A4}|..\\DottedLabel\\DottedLabel.csproj|c:\\users\\jcnas\\source\\repos\\johnnasitem\\adventofcode2024\\dottedlabel\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A1D99BFB-93DD-43D6-93F6-5AC999A9058C}|Day1_HistorianHysteria.csproj|c:\\users\\jcnas\\source\\repos\\johnnasitem\\adventofcode2024\\day1_historianhysteria\\historianhysteria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D99BFB-93DD-43D6-93F6-5AC999A9058C}|Day1_HistorianHysteria.csproj|solutionrelative:historianhysteria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1D99BFB-93DD-43D6-93F6-5AC999A9058C}|Day1_HistorianHysteria.csproj|c:\\users\\jcnas\\source\\repos\\johnnasitem\\adventofcode2024\\day1_historianhysteria\\historianhysteria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A1D99BFB-93DD-43D6-93F6-5AC999A9058C}|Day1_HistorianHysteria.csproj|solutionrelative:historianhysteria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC2EDC1D-6A8C-4843-A9CA-B34B96D229A4}|..\\DottedLabel\\DottedLabel.csproj|c:\\users\\jcnas\\source\\repos\\johnnasitem\\adventofcode2024\\dottedlabel\\dottedlabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +21,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,38 +33,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HistorianHysteria.cs",
               "DocumentMoniker": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day1_HistorianHysteria\\HistorianHysteria.cs",
               "RelativeDocumentMoniker": "HistorianHysteria.cs",
-              "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day1_HistorianHysteria\\HistorianHysteria.cs",
-              "RelativeToolTip": "HistorianHysteria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day1_HistorianHysteria\\HistorianHysteria.cs*",
+              "RelativeToolTip": "HistorianHysteria.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T01:49:04.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\DottedLabel\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\DottedLabel\\Class1.cs",
-              "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\DottedLabel\\Class1.cs",
-              "RelativeToolTip": "..\\DottedLabel\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DottedLabel.cs",
+              "DocumentMoniker": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\DottedLabel\\DottedLabel.cs",
+              "RelativeDocumentMoniker": "..\\DottedLabel\\DottedLabel.cs",
+              "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\DottedLabel\\DottedLabel.cs",
+              "RelativeToolTip": "..\\DottedLabel\\DottedLabel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T01:48:05.958Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HistorianHysteria.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day1_HistorianHysteria\\HistorianHysteria.cs",
               "RelativeDocumentMoniker": "HistorianHysteria.cs",
-              "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day1_HistorianHysteria\\HistorianHysteria.cs [Design]",
-              "RelativeToolTip": "HistorianHysteria.cs [Design]",
+              "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day1_HistorianHysteria\\HistorianHysteria.cs [Design]*",
+              "RelativeToolTip": "HistorianHysteria.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T01:30:47.917Z",
               "EditorCaption": " [Design]"

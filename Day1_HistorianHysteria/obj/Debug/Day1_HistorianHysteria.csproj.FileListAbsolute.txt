@@ -8,3 +8,6 @@ C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\
 C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\bin\Debug\Day1_HistorianHysteria.pdb
 C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_HistorianHysteria.exe
 C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_HistorianHysteria.pdb
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\bin\Debug\DottedLabel.dll
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\bin\Debug\DottedLabel.pdb
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day1_HistorianHysteria\obj\Debug\Day1_His.379120DD.Up2Date
