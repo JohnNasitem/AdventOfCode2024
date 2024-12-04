@@ -4,3 +4,11 @@ C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\D
 C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\DottedLabel.csproj.CoreCompileInputs.cache
 C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\DottedLabel.dll
 C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\DottedLabel.pdb
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\bin\Debug\DottedLabel.dll
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\bin\Debug\DottedLabel.pdb
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\DottedLabel.csproj.AssemblyReference.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\DottedLabel.DottedLabel.resources
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\DottedLabel.csproj.GenerateResource.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\DottedLabel.csproj.CoreCompileInputs.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\DottedLabel.dll
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\DottedLabel\obj\Debug\DottedLabel.pdb
