@@ -30,7 +30,7 @@
         {
             this.UI_DragDrop_Lbl = new DottedLabel.DottedLabel();
             this.UI_XmaxCountLabel_Lbl = new System.Windows.Forms.Label();
-            this.UI_XmasCount_Lbl = new System.Windows.Forms.TextBox();
+            this.UI_XmasCount_Tbx = new System.Windows.Forms.TextBox();
             this.UI_TimeTaken_Lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -47,6 +47,8 @@
             this.UI_DragDrop_Lbl.TabIndex = 0;
             this.UI_DragDrop_Lbl.Text = "Drag and Drop Input Here";
             this.UI_DragDrop_Lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UI_DragDrop_Lbl.DragDrop += new System.Windows.Forms.DragEventHandler(this.UI_DragDrop_Lbl_DragDrop);
+            this.UI_DragDrop_Lbl.DragEnter += new System.Windows.Forms.DragEventHandler(this.UI_DragDrop_Lbl_DragEnter);
             // 
             // UI_XmaxCountLabel_Lbl
             // 
@@ -59,15 +61,15 @@
             this.UI_XmaxCountLabel_Lbl.TabIndex = 1;
             this.UI_XmaxCountLabel_Lbl.Text = "XMAS Count:";
             // 
-            // UI_XmasCount_Lbl
+            // UI_XmasCount_Tbx
             // 
-            this.UI_XmasCount_Lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UI_XmasCount_Lbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UI_XmasCount_Lbl.Location = new System.Drawing.Point(211, 698);
-            this.UI_XmasCount_Lbl.Name = "UI_XmasCount_Lbl";
-            this.UI_XmasCount_Lbl.ReadOnly = true;
-            this.UI_XmasCount_Lbl.Size = new System.Drawing.Size(243, 42);
-            this.UI_XmasCount_Lbl.TabIndex = 2;
+            this.UI_XmasCount_Tbx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UI_XmasCount_Tbx.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UI_XmasCount_Tbx.Location = new System.Drawing.Point(211, 698);
+            this.UI_XmasCount_Tbx.Name = "UI_XmasCount_Tbx";
+            this.UI_XmasCount_Tbx.ReadOnly = true;
+            this.UI_XmasCount_Tbx.Size = new System.Drawing.Size(243, 42);
+            this.UI_XmasCount_Tbx.TabIndex = 2;
             // 
             // UI_TimeTaken_Lbl
             // 
@@ -86,7 +88,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1348, 753);
             this.Controls.Add(this.UI_TimeTaken_Lbl);
-            this.Controls.Add(this.UI_XmasCount_Lbl);
+            this.Controls.Add(this.UI_XmasCount_Tbx);
             this.Controls.Add(this.UI_XmaxCountLabel_Lbl);
             this.Controls.Add(this.UI_DragDrop_Lbl);
             this.Name = "CeresSearch";
@@ -100,7 +102,7 @@
 
         private DottedLabel.DottedLabel UI_DragDrop_Lbl;
         private System.Windows.Forms.Label UI_XmaxCountLabel_Lbl;
-        private System.Windows.Forms.TextBox UI_XmasCount_Lbl;
+        private System.Windows.Forms.TextBox UI_XmasCount_Tbx;
         private System.Windows.Forms.Label UI_TimeTaken_Lbl;
     }
 }
