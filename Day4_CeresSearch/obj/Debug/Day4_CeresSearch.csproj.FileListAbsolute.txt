@@ -1,0 +1,13 @@
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\bin\Debug\Day4_CeresSearch.exe.config
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\bin\Debug\Day4_CeresSearch.exe
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\bin\Debug\Day4_CeresSearch.pdb
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\bin\Debug\DottedLabel.dll
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\bin\Debug\DottedLabel.pdb
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\obj\Debug\Day4_CeresSearch.csproj.AssemblyReference.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\obj\Debug\Day4_CeresSearch.CeresSearch.resources
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\obj\Debug\Day4_CeresSearch.Properties.Resources.resources
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\obj\Debug\Day4_CeresSearch.csproj.GenerateResource.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\obj\Debug\Day4_CeresSearch.csproj.CoreCompileInputs.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\obj\Debug\Day4_Cer.FC46D6AF.Up2Date
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\obj\Debug\Day4_CeresSearch.exe
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day4_CeresSearch\obj\Debug\Day4_CeresSearch.pdb
