@@ -1,0 +1,13 @@
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\bin\Debug\Day2_MullItOver.exe.config
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\bin\Debug\Day2_MullItOver.exe
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\bin\Debug\Day2_MullItOver.pdb
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\bin\Debug\DottedLabel.dll
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\bin\Debug\DottedLabel.pdb
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\obj\Debug\Day3_MullItOver.csproj.AssemblyReference.cache
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\obj\Debug\Day2_MullItOver.MullItOver.resources
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\obj\Debug\Day2_MullItOver.Properties.Resources.resources
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\obj\Debug\Day3_MullItOver.csproj.GenerateResource.cache
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\obj\Debug\Day3_MullItOver.csproj.CoreCompileInputs.cache
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\obj\Debug\Day3_Mul.B7220D20.Up2Date
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\obj\Debug\Day2_MullItOver.exe
+C:\Users\Jcnas\source\repos\JohnNasitem\AdventOfCode2024\Day3_MullItOver\obj\Debug\Day2_MullItOver.pdb

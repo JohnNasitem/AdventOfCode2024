@@ -28,12 +28,27 @@ namespace Day2_MullItOver
 
             try
             {
-                File.ReadAllText(fname);
+                stopwatch.Start();
 
                 foreach (Match match in Regex.Matches(File.ReadAllText(fname), @"mul\(\d{1,3},\d{1,3}\)"))
                 {
-                    Console.WriteLine(match);
+                    Console.WriteLine(match.Value);
+                    int[] numbers = new int[2];
+                    int i = 0;
+
+                    foreach (Match num in Regex.Matches(match.Value, @"\d{1,3}"))
+                    {
+                        numbers[i++] = int.Parse(num.Value);
+                    }
+
+                    mulTotal += numbers[0] * numbers[1];
                 }
+
+                stopwatch.Stop();
+
+                //Output values
+                UI_TimeTaken_Lbl.Text = $"Time taken: {stopwatch.ElapsedTicks * (1.0 / Stopwatch.Frequency) * 1000} ms";
+                UI_MulTotal_Tbx.Text = mulTotal.ToString();
             }
             catch
             {
