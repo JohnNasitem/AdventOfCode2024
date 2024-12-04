@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Day4_CeresSearch
 {
-    public partial class Form1 : Form
+    public partial class CeresSearch : Form
     {
-        public Form1()
+        public CeresSearch()
         {
             InitializeComponent();
         }
