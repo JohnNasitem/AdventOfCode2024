@@ -1,4 +1,8 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\DottedLabel"
+  ],
+  "SelectedNode": "\\DottedLabel\\DottedLabel.csproj",
   "PreviewInSolutionExplorer": false
 }
