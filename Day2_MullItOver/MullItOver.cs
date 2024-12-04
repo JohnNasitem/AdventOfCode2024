@@ -16,5 +16,15 @@ namespace Day2_MullItOver
         {
             InitializeComponent();
         }
+
+        private void UI_DragDropSection_Lbl_DragDrop(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void UI_DragDropSection_Lbl_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
     }
 }
