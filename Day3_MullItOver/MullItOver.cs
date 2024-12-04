@@ -46,7 +46,6 @@ namespace Day2_MullItOver
 
                 stopwatch.Stop();
 
-                //Output values
                 UI_TimeTaken_Lbl.Text = $"Time taken: {stopwatch.ElapsedTicks * (1.0 / Stopwatch.Frequency) * 1000} ms";
                 UI_MulTotal_Tbx.Text = mulTotal.ToString();
             }
