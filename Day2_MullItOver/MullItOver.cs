@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Day2_MullItOver
 {
-    public partial class Form1 : Form
+    public partial class MullItOver : Form
     {
-        public Form1()
+        public MullItOver()
         {
             InitializeComponent();
         }
