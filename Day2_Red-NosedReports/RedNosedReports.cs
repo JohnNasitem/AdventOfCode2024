@@ -3,7 +3,7 @@
 //Description: Extract the reports and count how many reports are safe, 1 bad level is allowed
 //Date: Dec. 1/2024
 //Author: John Nasitem
-//Advent of Code 2024 Challenge - Day 1
+//Advent of Code 2024 Challenge - Day 2
 //https://adventofcode.com/2024/day/2
 //https://adventofcode.com/2024/day/2#part2
 //***********************************************************************************
