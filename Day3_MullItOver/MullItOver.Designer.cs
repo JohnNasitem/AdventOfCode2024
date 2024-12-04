@@ -1,4 +1,4 @@
-﻿namespace Day2_MullItOver
+﻿namespace Day3_MullItOver
 {
     partial class MullItOver
     {

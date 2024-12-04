@@ -21,7 +21,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-namespace Day2_MullItOver
+namespace Day3_MullItOver
 {
     public partial class MullItOver : Form
     {

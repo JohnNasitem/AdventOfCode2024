@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Day2_MullItOver.Properties
+namespace Day3_MullItOver.Properties
 {
 
 

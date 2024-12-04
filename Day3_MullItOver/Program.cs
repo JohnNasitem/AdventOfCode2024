@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Day2_MullItOver
+namespace Day3_MullItOver
 {
     internal static class Program
     {
