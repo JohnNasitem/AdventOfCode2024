@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace Day2_MullItOver
 {
@@ -21,6 +23,23 @@ namespace Day2_MullItOver
         private void UI_DragDropSection_Lbl_DragDrop(object sender, DragEventArgs e)
         {
             string fname = ((string[])e.Data.GetData(DataFormats.FileDrop)).First();
+            Stopwatch stopwatch = new Stopwatch();
+            int mulTotal = 0;
+
+            try
+            {
+                File.ReadAllText(fname);
+
+                foreach (Match match in Regex.Matches(File.ReadAllText(fname), @"mul\(\d{1,3},\d{1,3}\)"))
+                {
+                    Console.WriteLine(match);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to read file.");
+                return;
+            }
         }
 
         /// <summary>
