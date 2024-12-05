@@ -29,6 +29,7 @@ namespace Day5_PrintQueue
             int middleSum = 0;
             pageOrderingRules = new Dictionary<int, List<int>>();
             List<List<int>> pagesToUpdate = new List<List<int>>();
+            List<List<int>> incorrectlyOrderedPages = new List<List<int>>();
             bool isDataOrderingRules = true;
 
             //try
@@ -64,10 +65,13 @@ namespace Day5_PrintQueue
                     pagesToUpdate.Add(line.Split(',').Select(int.Parse).ToList());
             }
 
-            foreach (List<int> page in pagesToUpdate)
-                if (IsUpdateInRightOrder(page))
-                    middleSum += page[(int)Math.Floor(page.Count / 2.0)];
-
+            foreach (List<int> pages in pagesToUpdate)
+            {
+                if (ArePagesInRightOrder(pages))
+                    middleSum += pages[(int)Math.Floor(pages.Count / 2.0)];
+                else
+                    incorrectlyOrderedPages.Add(pages);
+            }
 
             stopwatch.Stop();
 
@@ -90,13 +94,30 @@ namespace Day5_PrintQueue
                 e.Effect = DragDropEffects.None;
         }
 
-        private bool IsUpdateInRightOrder(List<int> update)
+        private bool ArePagesInRightOrder(List<int> pages)
         {
-            for (int i = update.Count - 1; i > 0; i--)
-                if (pageOrderingRules[update[i]].Intersect(update.GetRange(0, i)).ToList().Count > 0)
+            for (int i = pages.Count - 1; i > 0; i--)
+                if (pageOrderingRules[pages[i]].Intersect(pages.GetRange(0, i)).ToList().Count > 0)
                     return false;
 
             return true;
+        }
+
+        private List<int> OrderPages(List<int> pages)
+        {
+            List<int> orderedPages = new List<int>();
+            List<int> tempPages;
+
+            //iterate over each index in the orderedPages list
+            //in each iteration iterate over pages and find which one is allowed to be infront of the remaining pages (ones that havent been added yet)
+            //Then add that page to orderedPages and remove it from tempPages
+            for (int i = 0; i < pages.Count; i++)
+            {
+                for (int j = 0; j < pages.Count; j++)
+                {
+
+                }
+            }
         }
     }
 }
