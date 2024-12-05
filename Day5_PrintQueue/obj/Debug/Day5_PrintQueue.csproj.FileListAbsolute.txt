@@ -1,0 +1,13 @@
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\bin\Debug\Day5_PrintQueue.exe.config
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\bin\Debug\Day5_PrintQueue.exe
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\bin\Debug\Day5_PrintQueue.pdb
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\bin\Debug\DottedLabel.dll
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\bin\Debug\DottedLabel.pdb
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\obj\Debug\Day5_PrintQueue.csproj.AssemblyReference.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\obj\Debug\Day5_PrintQueue.Form1.resources
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\obj\Debug\Day5_PrintQueue.Properties.Resources.resources
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\obj\Debug\Day5_PrintQueue.csproj.GenerateResource.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\obj\Debug\Day5_PrintQueue.csproj.CoreCompileInputs.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\obj\Debug\Day5_Pri.B660ADF7.Up2Date
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\obj\Debug\Day5_PrintQueue.exe
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day5_PrintQueue\obj\Debug\Day5_PrintQueue.pdb
