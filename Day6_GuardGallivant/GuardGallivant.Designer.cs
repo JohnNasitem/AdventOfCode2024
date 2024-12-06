@@ -44,6 +44,8 @@
             this.UI_DragDrop_Lbl.TabIndex = 0;
             this.UI_DragDrop_Lbl.Text = "Drag and Drop Input Here";
             this.UI_DragDrop_Lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UI_DragDrop_Lbl.DragDrop += new System.Windows.Forms.DragEventHandler(this.UI_DragDrop_Lbl_DragDrop);
+            this.UI_DragDrop_Lbl.DragEnter += new System.Windows.Forms.DragEventHandler(this.UI_DragDrop_Lbl_DragEnter);
             // 
             // UI_VisitedPositionsCountLabel_Lbl
             // 
