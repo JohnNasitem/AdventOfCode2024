@@ -1,6 +1,6 @@
 ﻿namespace Day6_GuardGallivant
 {
-    partial class Form1
+    partial class GuardGallivant
     {
         /// <summary>
         /// Required designer variable.
@@ -74,7 +74,7 @@
             this.UI_TimeTaken_Lbl.TabIndex = 3;
             this.UI_TimeTaken_Lbl.Text = "Time Taken: Unknown";
             // 
-            // Form1
+            // GuardGallivant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,8 +83,8 @@
             this.Controls.Add(this.UI_VisitedPositionsCount_Tbx);
             this.Controls.Add(this.UI_VisitedPositionsCountLabel_Lbl);
             this.Controls.Add(this.UI_DragDrop_Lbl);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "GuardGallivant";
+            this.Text = "Guard Gallivant";
             this.ResumeLayout(false);
             this.PerformLayout();
 
