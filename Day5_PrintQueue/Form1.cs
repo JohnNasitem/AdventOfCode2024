@@ -1,4 +1,14 @@
-﻿using System;
+﻿//***********************************************************************************
+//Program: PrintQueue.cs          
+//Description: Extract xmas and mas in x form word search (input)
+//Date: Dec. 4/2024
+//Author: John Nasitem
+//Advent of Code 2024 Challenge - Day 4
+//https://adventofcode.com/2024/day/4
+//https://adventofcode.com/2024/day/4#part2
+//***********************************************************************************
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,58 +36,58 @@ namespace Day5_PrintQueue
         {
             string fname = ((string[])e.Data.GetData(DataFormats.FileDrop)).First();        //Get dropped file name
             Stopwatch stopwatch = new Stopwatch();           //Measure how long it takes to get the output
-            int middleSum = 0;
+            int middleSum = 0, incorrectMiddleSum = 0;
             pageOrderingRules = new Dictionary<int, List<int>>();
             List<List<int>> pagesToUpdate = new List<List<int>>();
-            List<List<int>> incorrectlyOrderedPages = new List<List<int>>();
             bool isDataOrderingRules = true;
 
-            //try
-            //{
-            //    
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Failed to read file.");
-            //    return;
-            //}
-
-            stopwatch.Start();
-
-            //Extract the data
-            foreach (string line in File.ReadAllLines(fname))
+            try
             {
-                if (line == "")
-                {
-                    isDataOrderingRules = false;
-                    continue;
-                }
+                stopwatch.Start();
 
-                if (isDataOrderingRules)
+                //Extract the data
+                foreach (string line in File.ReadAllLines(fname))
                 {
-                    int key = int.Parse(line.Split('|')[0]);
-                    if (pageOrderingRules.ContainsKey(key))
-                        pageOrderingRules[key].Add(int.Parse(line.Split('|')[1]));
+                    if (line == "")
+                    {
+                        isDataOrderingRules = false;
+                        continue;
+                    }
+
+                    if (isDataOrderingRules)
+                    {
+                        int key = int.Parse(line.Split('|')[0]);
+                        if (pageOrderingRules.ContainsKey(key))
+                            pageOrderingRules[key].Add(int.Parse(line.Split('|')[1]));
+                        else
+                            pageOrderingRules.Add(key, new List<int>() { int.Parse(line.Split('|')[1]) });
+                    }
                     else
-                        pageOrderingRules.Add(key, new List<int>() { int.Parse(line.Split('|')[1]) });
+                        pagesToUpdate.Add(line.Split(',').Select(int.Parse).ToList());
                 }
-                else
-                    pagesToUpdate.Add(line.Split(',').Select(int.Parse).ToList());
-            }
 
-            foreach (List<int> pages in pagesToUpdate)
+                foreach (List<int> pages in pagesToUpdate)
+                {
+                    if (ArePagesInRightOrder(pages))
+                        middleSum += pages[(int)Math.Floor(pages.Count / 2.0)];
+                    else
+                        incorrectMiddleSum += OrderPages(pages)[(int)Math.Floor(pages.Count / 2.0)];
+                }
+
+
+
+                stopwatch.Stop();
+
+                //Output values
+                UI_TimeTaken_Lbl.Text = $"Time taken: {stopwatch.ElapsedTicks * (1.0 / Stopwatch.Frequency) * 1000} ms";
+                UI_MiddleSum_Tbx.Text = middleSum.ToString();
+                UI_IncorrectMiddleSum_Tbx.Text = incorrectMiddleSum.ToString();
+            }
+            catch
             {
-                if (ArePagesInRightOrder(pages))
-                    middleSum += pages[(int)Math.Floor(pages.Count / 2.0)];
-                else
-                    incorrectlyOrderedPages.Add(pages);
+                MessageBox.Show("Failed to read file.");
+                return;
             }
-
-            stopwatch.Stop();
-
-            //Output values
-            UI_TimeTaken_Lbl.Text = $"Time taken: {stopwatch.ElapsedTicks * (1.0 / Stopwatch.Frequency) * 1000} ms";
-            UI_MiddleSum_Tbx.Text = middleSum.ToString();
         }
 
 
@@ -106,18 +116,25 @@ namespace Day5_PrintQueue
         private List<int> OrderPages(List<int> pages)
         {
             List<int> orderedPages = new List<int>();
-            List<int> tempPages;
+            List<int> availablePages = new List<int>(pages);
 
             //iterate over each index in the orderedPages list
             //in each iteration iterate over pages and find which one is allowed to be infront of the remaining pages (ones that havent been added yet)
             //Then add that page to orderedPages and remove it from tempPages
             for (int i = 0; i < pages.Count; i++)
             {
-                for (int j = 0; j < pages.Count; j++)
+                for (int j = 0; j < availablePages.Count; j++)
                 {
-
+                    if (pageOrderingRules[availablePages[j]].Intersect(availablePages.GetRange(j + 1, availablePages.Count - j - 1)).ToList().Count == 0)
+                    {
+                        orderedPages.Add(availablePages[j]);
+                        availablePages.RemoveAt(j);
+                        break;
+                    }
                 }
             }
+
+            return orderedPages;
         }
     }
 }
