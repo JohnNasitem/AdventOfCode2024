@@ -1,0 +1,13 @@
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\obj\Debug\Day6_GuardGallivant.csproj.AssemblyReference.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\obj\Debug\Day6_GuardGallivant.GuardGallivant.resources
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\obj\Debug\Day6_GuardGallivant.Properties.Resources.resources
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\obj\Debug\Day6_GuardGallivant.csproj.GenerateResource.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\obj\Debug\Day6_GuardGallivant.csproj.CoreCompileInputs.cache
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\bin\Debug\Day6_GuardGallivant.exe.config
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\bin\Debug\Day6_GuardGallivant.exe
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\bin\Debug\Day6_GuardGallivant.pdb
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\bin\Debug\DottedLabel.dll
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\bin\Debug\DottedLabel.pdb
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\obj\Debug\Day6_Gua.280A357D.Up2Date
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\obj\Debug\Day6_GuardGallivant.exe
+C:\Users\John\source\repos\JohnNasitem\AdventOfCode2024\Day6_GuardGallivant\obj\Debug\Day6_GuardGallivant.pdb
