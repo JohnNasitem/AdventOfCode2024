@@ -23,11 +23,11 @@ using System.IO;
 
 namespace Day5_PrintQueue
 {
-    public partial class Form1 : Form
+    public partial class PrintQueue : Form
     {
         Dictionary<int, List<int>> pageOrderingRules = null;
 
-        public Form1()
+        public PrintQueue()
         {
             InitializeComponent();
         }

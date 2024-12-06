@@ -1,6 +1,6 @@
 ﻿namespace Day5_PrintQueue
 {
-    partial class Form1
+    partial class PrintQueue
     {
         /// <summary>
         /// Required designer variable.
@@ -70,7 +70,7 @@
             this.UI_MiddleSum_Tbx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.UI_MiddleSum_Tbx.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UI_MiddleSum_Tbx.Location = new System.Drawing.Point(106, 355);
-            this.UI_MiddleSum_Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UI_MiddleSum_Tbx.Margin = new System.Windows.Forms.Padding(2);
             this.UI_MiddleSum_Tbx.Name = "UI_MiddleSum_Tbx";
             this.UI_MiddleSum_Tbx.ReadOnly = true;
             this.UI_MiddleSum_Tbx.Size = new System.Drawing.Size(131, 27);
@@ -85,7 +85,7 @@
             this.UI_TimeTaken_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UI_TimeTaken_Lbl.Name = "UI_TimeTaken_Lbl";
             this.UI_TimeTaken_Lbl.Size = new System.Drawing.Size(177, 19);
-            this.UI_TimeTaken_Lbl.TabIndex = 3;
+            this.UI_TimeTaken_Lbl.TabIndex = 5;
             this.UI_TimeTaken_Lbl.Text = "Time Taken: Unknown";
             // 
             // UI_IncorrectMiddleSum_Tbx
@@ -97,7 +97,7 @@
             this.UI_IncorrectMiddleSum_Tbx.Name = "UI_IncorrectMiddleSum_Tbx";
             this.UI_IncorrectMiddleSum_Tbx.ReadOnly = true;
             this.UI_IncorrectMiddleSum_Tbx.Size = new System.Drawing.Size(131, 27);
-            this.UI_IncorrectMiddleSum_Tbx.TabIndex = 5;
+            this.UI_IncorrectMiddleSum_Tbx.TabIndex = 4;
             // 
             // UI_IncorrectMiddleSumLabel_Lbl
             // 
@@ -108,10 +108,10 @@
             this.UI_IncorrectMiddleSumLabel_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UI_IncorrectMiddleSumLabel_Lbl.Name = "UI_IncorrectMiddleSumLabel_Lbl";
             this.UI_IncorrectMiddleSumLabel_Lbl.Size = new System.Drawing.Size(177, 19);
-            this.UI_IncorrectMiddleSumLabel_Lbl.TabIndex = 4;
+            this.UI_IncorrectMiddleSumLabel_Lbl.TabIndex = 3;
             this.UI_IncorrectMiddleSumLabel_Lbl.Text = "Incorrect Middle Sum:";
             // 
-            // Form1
+            // PrintQueue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,9 +122,9 @@
             this.Controls.Add(this.UI_MiddleSum_Tbx);
             this.Controls.Add(this.UI_MiddleSumLabel_Lbl);
             this.Controls.Add(this.UI_DragDrop_Lbl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "PrintQueue";
+            this.Text = "Print Queue";
             this.ResumeLayout(false);
             this.PerformLayout();
 
