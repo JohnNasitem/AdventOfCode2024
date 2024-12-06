@@ -1,11 +1,12 @@
 ﻿//***********************************************************************************
 //Program: PrintQueue.cs          
-//Description: Extract xmas and mas in x form word search (input)
-//Date: Dec. 4/2024
+//Description: Extract the page ordering rules as well as the pages to produce in each update (input)
+//             Return the sum of the middle values in each pages to produce that are in the right order and a separate sum for the ones no in the right order
+//Date: Dec. 5/2024
 //Author: John Nasitem
-//Advent of Code 2024 Challenge - Day 4
-//https://adventofcode.com/2024/day/4
-//https://adventofcode.com/2024/day/4#part2
+//Advent of Code 2024 Challenge - Day 5
+//https://adventofcode.com/2024/day/5
+//https://adventofcode.com/2024/day/5#part2
 //***********************************************************************************
 
 using System;
@@ -25,21 +26,28 @@ namespace Day5_PrintQueue
 {
     public partial class PrintQueue : Form
     {
-        Dictionary<int, List<int>> pageOrderingRules = null;
+        Dictionary<int, List<int>> pageOrderingRules = null;            //Ordering rules
 
         public PrintQueue()
         {
             InitializeComponent();
         }
 
+
+
+        /// <summary>
+        /// Sum the middle values in each of the pages to update, use seperate sums for correctly ordered pages and incorrectly ordered pages that were sorted
+        /// </summary>
+        /// <param name="sender">Object that called the code</param>
+        /// <param name="e">Event args</param>
         private void UI_DragDrop_Lbl_DragDrop(object sender, DragEventArgs e)
         {
             string fname = ((string[])e.Data.GetData(DataFormats.FileDrop)).First();        //Get dropped file name
-            Stopwatch stopwatch = new Stopwatch();           //Measure how long it takes to get the output
-            int middleSum = 0, incorrectMiddleSum = 0;
-            pageOrderingRules = new Dictionary<int, List<int>>();
-            List<List<int>> pagesToUpdate = new List<List<int>>();
-            bool isDataOrderingRules = true;
+            Stopwatch stopwatch = new Stopwatch();                                          //Measure how long it takes to get the output
+            int middleSum = 0, incorrectMiddleSum = 0;                                      //Sums for both in order pages and not in order pages
+            pageOrderingRules = new Dictionary<int, List<int>>();                           //Ordering rules
+            List<List<int>> pagesToUpdate = new List<List<int>>();                          //Extracted list of pages to update
+            bool isDataOrderingRules = true;                                                //Flag to determine what value is being extracted
 
             try
             {
@@ -48,6 +56,7 @@ namespace Day5_PrintQueue
                 //Extract the data
                 foreach (string line in File.ReadAllLines(fname))
                 {
+                    //If the line is empty then switch to extracting pages
                     if (line == "")
                     {
                         isDataOrderingRules = false;
@@ -57,6 +66,8 @@ namespace Day5_PrintQueue
                     if (isDataOrderingRules)
                     {
                         int key = int.Parse(line.Split('|')[0]);
+
+                        //If the key doesnt exist yet in the dictionary then create one, if it does then add it to the keys values
                         if (pageOrderingRules.ContainsKey(key))
                             pageOrderingRules[key].Add(int.Parse(line.Split('|')[1]));
                         else
@@ -66,6 +77,11 @@ namespace Day5_PrintQueue
                         pagesToUpdate.Add(line.Split(',').Select(int.Parse).ToList());
                 }
 
+
+
+                //Iterate through the list of pages to update
+                //Accumulate the sums for the correctly ordered pages
+                //And sort then accumalte to sums for incorrected ordered pages
                 foreach (List<int> pages in pagesToUpdate)
                 {
                     if (ArePagesInRightOrder(pages))
@@ -73,8 +89,6 @@ namespace Day5_PrintQueue
                     else
                         incorrectMiddleSum += OrderPages(pages)[(int)Math.Floor(pages.Count / 2.0)];
                 }
-
-
 
                 stopwatch.Stop();
 
@@ -104,8 +118,18 @@ namespace Day5_PrintQueue
                 e.Effect = DragDropEffects.None;
         }
 
+
+
+        /// <summary>
+        /// Check if the list of pages are in correct order acorrding to the page ordering rules
+        /// </summary>
+        /// <param name="pages">Pages to check</param>
+        /// <returns></returns>
         private bool ArePagesInRightOrder(List<int> pages)
         {
+            //Start iterating from the back (stop at the second first index because first doesnt need to be checked as nothing is infront of it)
+            //Check each value if the values before it are allowed to be before it using the page ordering rules
+            //Values in the page ordering rules are numbers that are supposed to be before the number being checked
             for (int i = pages.Count - 1; i > 0; i--)
                 if (pageOrderingRules[pages[i]].Intersect(pages.GetRange(0, i)).ToList().Count > 0)
                     return false;
@@ -113,26 +137,29 @@ namespace Day5_PrintQueue
             return true;
         }
 
+
+
+        /// <summary>
+        /// Sort the pages to conform to the page ordering rules
+        /// </summary>
+        /// <param name="pages">Pages to order</param>
+        /// <returns></returns>
         private List<int> OrderPages(List<int> pages)
         {
-            List<int> orderedPages = new List<int>();
-            List<int> availablePages = new List<int>(pages);
+            List<int> orderedPages = new List<int>();           //Sorted pages
+            List<int> availablePages = new List<int>(pages);    //Pages left to the sorted
 
             //iterate over each index in the orderedPages list
-            //in each iteration iterate over pages and find which one is allowed to be infront of the remaining pages (ones that havent been added yet)
-            //Then add that page to orderedPages and remove it from tempPages
+            //in each iteration, iterate over pages and find which one is allowed to be infront of the remaining pages (ones that havent been added yet)
+            //Then add that page to orderedPages and remove it from avaliable pages
             for (int i = 0; i < pages.Count; i++)
-            {
                 for (int j = 0; j < availablePages.Count; j++)
-                {
                     if (pageOrderingRules[availablePages[j]].Intersect(availablePages.GetRange(j + 1, availablePages.Count - j - 1)).ToList().Count == 0)
                     {
                         orderedPages.Add(availablePages[j]);
                         availablePages.RemoveAt(j);
                         break;
                     }
-                }
-            }
 
             return orderedPages;
         }
