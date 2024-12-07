@@ -18,7 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 2,
+=======
+          "SelectedChildIndex": 3,
+>>>>>>> .
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +30,13 @@
             },
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
+=======
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+>>>>>>> .
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
@@ -36,7 +47,11 @@
               "RelativeDocumentMoniker": "GuardGallivant.cs",
               "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs",
               "RelativeToolTip": "GuardGallivant.cs",
-              "ViewState": "AgIAAEEBAAAAAAAAAAAmwEgBAAAdAAAAAAAAAA==",
+<<<<<<< HEAD
+              "ViewState": "AgIAAEEBAAAAAAAAAAAmwF8BAABCAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAEEBAAAAAAAAAAAmwFEBAAAVAAAAAAAAAA==",
+>>>>>>> .
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-06T20:31:14.263Z",
               "EditorCaption": ""

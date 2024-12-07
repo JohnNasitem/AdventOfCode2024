@@ -36,10 +36,14 @@
               "RelativeDocumentMoniker": "GuardGallivant.cs",
               "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs",
               "RelativeToolTip": "GuardGallivant.cs",
-              "ViewState": "AgIAAEEBAAAAAAAAAAAmwF8BAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-06T20:31:14.263Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -50,8 +54,7 @@
               "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs [Design]",
               "RelativeToolTip": "GuardGallivant.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T20:24:27.226Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-06T20:24:27.226Z"
             }
           ]
         }
