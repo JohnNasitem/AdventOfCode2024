@@ -34,6 +34,8 @@
             this.UI_TimeTaken_Lbl = new System.Windows.Forms.Label();
             this.UI_WatchPath_Lbl = new System.Windows.Forms.Label();
             this.UI_WatchPathCalulcation_Cbx = new System.Windows.Forms.CheckBox();
+            this.UI_LoopCount_Tbx = new System.Windows.Forms.TextBox();
+            this.UI_LoopCountLabel_Lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // UI_DragDrop_Lbl
@@ -43,7 +45,7 @@
             this.UI_DragDrop_Lbl.Location = new System.Drawing.Point(7, 5);
             this.UI_DragDrop_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UI_DragDrop_Lbl.Name = "UI_DragDrop_Lbl";
-            this.UI_DragDrop_Lbl.Size = new System.Drawing.Size(937, 367);
+            this.UI_DragDrop_Lbl.Size = new System.Drawing.Size(1188, 367);
             this.UI_DragDrop_Lbl.TabIndex = 0;
             this.UI_DragDrop_Lbl.Text = "Drag and Drop Input Here";
             this.UI_DragDrop_Lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,15 +59,15 @@
             this.UI_VisitedPositionsCountLabel_Lbl.Location = new System.Drawing.Point(7, 378);
             this.UI_VisitedPositionsCountLabel_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UI_VisitedPositionsCountLabel_Lbl.Name = "UI_VisitedPositionsCountLabel_Lbl";
-            this.UI_VisitedPositionsCountLabel_Lbl.Size = new System.Drawing.Size(176, 19);
+            this.UI_VisitedPositionsCountLabel_Lbl.Size = new System.Drawing.Size(180, 19);
             this.UI_VisitedPositionsCountLabel_Lbl.TabIndex = 1;
-            this.UI_VisitedPositionsCountLabel_Lbl.Text = "Visited Positions Count";
+            this.UI_VisitedPositionsCountLabel_Lbl.Text = "Visited Positions Count:";
             // 
             // UI_VisitedPositionsCount_Tbx
             // 
             this.UI_VisitedPositionsCount_Tbx.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UI_VisitedPositionsCount_Tbx.Location = new System.Drawing.Point(181, 374);
-            this.UI_VisitedPositionsCount_Tbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UI_VisitedPositionsCount_Tbx.Location = new System.Drawing.Point(183, 374);
+            this.UI_VisitedPositionsCount_Tbx.Margin = new System.Windows.Forms.Padding(2);
             this.UI_VisitedPositionsCount_Tbx.Name = "UI_VisitedPositionsCount_Tbx";
             this.UI_VisitedPositionsCount_Tbx.ReadOnly = true;
             this.UI_VisitedPositionsCount_Tbx.Size = new System.Drawing.Size(157, 27);
@@ -75,7 +77,7 @@
             // 
             this.UI_TimeTaken_Lbl.AutoSize = true;
             this.UI_TimeTaken_Lbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UI_TimeTaken_Lbl.Location = new System.Drawing.Point(339, 378);
+            this.UI_TimeTaken_Lbl.Location = new System.Drawing.Point(610, 378);
             this.UI_TimeTaken_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UI_TimeTaken_Lbl.Name = "UI_TimeTaken_Lbl";
             this.UI_TimeTaken_Lbl.Size = new System.Drawing.Size(177, 19);
@@ -96,25 +98,48 @@
             // 
             this.UI_WatchPathCalulcation_Cbx.AutoSize = true;
             this.UI_WatchPathCalulcation_Cbx.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UI_WatchPathCalulcation_Cbx.Location = new System.Drawing.Point(739, 376);
+            this.UI_WatchPathCalulcation_Cbx.Location = new System.Drawing.Point(996, 376);
             this.UI_WatchPathCalulcation_Cbx.Name = "UI_WatchPathCalulcation_Cbx";
             this.UI_WatchPathCalulcation_Cbx.Size = new System.Drawing.Size(199, 23);
             this.UI_WatchPathCalulcation_Cbx.TabIndex = 5;
             this.UI_WatchPathCalulcation_Cbx.Text = "Watch Path Calulation";
             this.UI_WatchPathCalulcation_Cbx.UseVisualStyleBackColor = true;
             // 
+            // UI_LoopCount_Tbx
+            // 
+            this.UI_LoopCount_Tbx.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UI_LoopCount_Tbx.Location = new System.Drawing.Point(449, 374);
+            this.UI_LoopCount_Tbx.Margin = new System.Windows.Forms.Padding(2);
+            this.UI_LoopCount_Tbx.Name = "UI_LoopCount_Tbx";
+            this.UI_LoopCount_Tbx.ReadOnly = true;
+            this.UI_LoopCount_Tbx.Size = new System.Drawing.Size(157, 27);
+            this.UI_LoopCount_Tbx.TabIndex = 7;
+            // 
+            // UI_LoopCountLabel_Lbl
+            // 
+            this.UI_LoopCountLabel_Lbl.AutoSize = true;
+            this.UI_LoopCountLabel_Lbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UI_LoopCountLabel_Lbl.Location = new System.Drawing.Point(344, 378);
+            this.UI_LoopCountLabel_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UI_LoopCountLabel_Lbl.Name = "UI_LoopCountLabel_Lbl";
+            this.UI_LoopCountLabel_Lbl.Size = new System.Drawing.Size(101, 19);
+            this.UI_LoopCountLabel_Lbl.TabIndex = 6;
+            this.UI_LoopCountLabel_Lbl.Text = "Loop Count:";
+            // 
             // GuardGallivant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 403);
+            this.ClientSize = new System.Drawing.Size(1206, 403);
+            this.Controls.Add(this.UI_LoopCount_Tbx);
+            this.Controls.Add(this.UI_LoopCountLabel_Lbl);
             this.Controls.Add(this.UI_WatchPathCalulcation_Cbx);
             this.Controls.Add(this.UI_WatchPath_Lbl);
             this.Controls.Add(this.UI_TimeTaken_Lbl);
             this.Controls.Add(this.UI_VisitedPositionsCount_Tbx);
             this.Controls.Add(this.UI_VisitedPositionsCountLabel_Lbl);
             this.Controls.Add(this.UI_DragDrop_Lbl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GuardGallivant";
             this.Text = "Guard Gallivant";
             this.ResumeLayout(false);
@@ -130,6 +155,8 @@
         private System.Windows.Forms.Label UI_TimeTaken_Lbl;
         private System.Windows.Forms.Label UI_WatchPath_Lbl;
         private System.Windows.Forms.CheckBox UI_WatchPathCalulcation_Cbx;
+        private System.Windows.Forms.TextBox UI_LoopCount_Tbx;
+        private System.Windows.Forms.Label UI_LoopCountLabel_Lbl;
     }
 }
 
