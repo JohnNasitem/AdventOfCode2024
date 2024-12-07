@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using GDIDrawer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+//given up on part 2
 
 namespace Day6_GuardGallivant
 {
