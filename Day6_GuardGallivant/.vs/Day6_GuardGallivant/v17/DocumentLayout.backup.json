@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\John\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\",
+  "WorkspaceRootPath": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7782813-4251-4584-A39D-64C663046721}|Day6_GuardGallivant.csproj|c:\\users\\john\\source\\repos\\johnnasitem\\adventofcode2024\\day6_guardgallivant\\guardgallivant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E7782813-4251-4584-A39D-64C663046721}|Day6_GuardGallivant.csproj|c:\\users\\jcnas\\source\\repos\\johnnasitem\\adventofcode2024\\day6_guardgallivant\\guardgallivant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7782813-4251-4584-A39D-64C663046721}|Day6_GuardGallivant.csproj|solutionrelative:guardgallivant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7782813-4251-4584-A39D-64C663046721}|Day6_GuardGallivant.csproj|c:\\users\\john\\source\\repos\\johnnasitem\\adventofcode2024\\day6_guardgallivant\\guardgallivant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E7782813-4251-4584-A39D-64C663046721}|Day6_GuardGallivant.csproj|C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\guardgallivant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E7782813-4251-4584-A39D-64C663046721}|Day6_GuardGallivant.csproj|solutionrelative:guardgallivant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,21 +18,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "GuardGallivant.cs",
-              "DocumentMoniker": "C:\\Users\\John\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs",
+              "DocumentMoniker": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs",
               "RelativeDocumentMoniker": "GuardGallivant.cs",
-              "ToolTip": "C:\\Users\\John\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs",
+              "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs",
               "RelativeToolTip": "GuardGallivant.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAiwFYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-06T20:31:14.263Z",
               "EditorCaption": ""
@@ -41,9 +45,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "GuardGallivant.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\John\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs",
+              "DocumentMoniker": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs",
               "RelativeDocumentMoniker": "GuardGallivant.cs",
-              "ToolTip": "C:\\Users\\John\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs [Design]",
+              "ToolTip": "C:\\Users\\Jcnas\\source\\repos\\JohnNasitem\\AdventOfCode2024\\Day6_GuardGallivant\\GuardGallivant.cs [Design]",
               "RelativeToolTip": "GuardGallivant.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-06T20:24:27.226Z",

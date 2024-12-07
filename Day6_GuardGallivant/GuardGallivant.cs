@@ -9,13 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using GDIDrawer;
 
 namespace Day6_GuardGallivant
 {
     public partial class GuardGallivant : Form
     {
         HashSet<Point> visitedPositions = new HashSet<Point>();
-        List<List<MapObjects>> map = new List<List<MapObjects>>();
+        List<List<MapObjects>> map;
+        CDrawer canvas = null;
+        bool outOfBounds = false;
 
         public GuardGallivant()
         {
@@ -26,7 +29,6 @@ namespace Day6_GuardGallivant
         {
             string fname = ((string[])e.Data.GetData(DataFormats.FileDrop)).First();        //Get dropped file name
             Stopwatch stopwatch = new Stopwatch();                                          //Measure how long it takes to get the output
-            int visitedPositionsCount = 0;
             Point guardPosition = Point.Empty;
             GuardDirection guardDirection = new GuardDirection();
 
@@ -44,13 +46,22 @@ namespace Day6_GuardGallivant
 
             string[] fileContents = File.ReadAllLines(fname);
 
+            //Assume a sqaure map
+            if (canvas != null)
+                canvas.Close();
+
+            canvas = new CDrawer(fileContents.Length * 4, fileContents.Length * 4, false);
+            canvas.Scale = 4;
+
+            map = new List<List<MapObjects>>();
+
             //Extract the data
             for (int y = 0; y < fileContents.Length; y++)
             {
                 string line = fileContents[y];
                 List<MapObjects> extractedLine = new List<MapObjects>();
 
-                for (int x = 0; x < line.Length; x++)
+                for (int x = 0; x < fileContents[y].Length; x++)
                 {
                     char mapObject = line[x];
                     if (new char[] { '<', '>', '^', 'v'}.Contains(mapObject))
@@ -81,18 +92,24 @@ namespace Day6_GuardGallivant
                         extractedLine.Add(MapObjects.Obstruction);
                     else if (mapObject == '.')
                         extractedLine.Add(MapObjects.Air);
+
                 }
 
                 map.Add(extractedLine);
             }
 
-            visitedPositionsCount = MoveGuard(guardPosition, guardDirection);
+            //Calculate path
+            do
+                MoveGuard(ref guardPosition, ref guardDirection);
+            while (!outOfBounds);
 
             stopwatch.Stop();
-            
+
+            Render();
+
             //Output values
             UI_TimeTaken_Lbl.Text = $"Time taken: {stopwatch.ElapsedTicks * (1.0 / Stopwatch.Frequency) * 1000} ms";
-            UI_VisitedPositionsCount_Tbx.Text = visitedPositionsCount.ToString();
+            UI_VisitedPositionsCount_Tbx.Text = visitedPositions.Count.ToString();
         }
 
 
@@ -109,25 +126,40 @@ namespace Day6_GuardGallivant
                 e.Effect = DragDropEffects.None;
         }
 
-        private int MoveGuard(Point guardPos, GuardDirection guardDir, bool OutOfBounds = false)
+        private void MoveGuard(ref Point guardPos, ref GuardDirection guardDir)
         {
+            Point nextPoint = NextPosition(guardPos, guardDir);
+
+            if (IsGuardOutOfBounds(nextPoint))
+            {
+                visitedPositions.Add(guardPos);
+                outOfBounds = true;
+                return;
+            }
+
             //Check if there is an obstance in front of guard
-                //Change guard direction to 90 degrees
-                    //Check again just incase if there is another obstance on his right
-                //Change directions if it is
+            //Check twice in case there are 2 obstances diagonal to each other
+            for (int i = 0; i < 2; i++)
+            {
+                if (map[nextPoint.Y][nextPoint.X] == MapObjects.Obstruction)
+                {
+                    //Change guard direction to 90 degrees
+                    //Enums are ordered in a way that if current direction is up, next direction in the enum is 90 degress
+                    guardDir = (GuardDirection)(((int)guardDir + 1) % 4);
+                    nextPoint = NextPosition(guardPos, guardDir);
+                }
+            }
 
+            map[guardPos.Y][guardPos.X] = MapObjects.Visited;
+            map[nextPoint.Y][nextPoint.X] = MapObjects.Guard;
 
-                //Move guard
+            if (UI_WatchPathCalulcation_Cbx.Checked)
+                Render();
 
-                //If guard hasnt been here before (add point to hashset, true if new pos, false if old pos)
-                    //Return 1 + MoveGuard(...)
-                //return MoveGuard(...) 
+            visitedPositions.Add(guardPos);
 
-            //If none
-                //Move guard in the direction he is facing
-                //If guard hasnt been here before (add point to hashset, true if new pos, false if old pos)
-                    //Return 1 + MoveGuard(...)
-                //return MoveGuard(...) 
+            guardPos = nextPoint;
+            return;
         }
 
         private bool IsGuardOutOfBounds(Point guardPos)
@@ -138,19 +170,74 @@ namespace Day6_GuardGallivant
             return false;
         }
 
+        private Point NextPosition(Point currentPostion, GuardDirection direction)
+        {
+            switch (direction)
+            {
+                case GuardDirection.Left:
+                    currentPostion.X--;
+                    return currentPostion;
+
+                case GuardDirection.Right:
+                    currentPostion.X++;
+                    return currentPostion;
+
+                case GuardDirection.Up:
+                    currentPostion.Y--;
+                    return currentPostion;
+
+                case GuardDirection.Down:
+                    currentPostion.Y++;
+                    return currentPostion;
+            }
+
+            //Never going to reach
+            //But is needed to satify the condition of all code paths return a value
+            return new Point();
+        }
+
+        private void Render()
+        {
+            canvas.Clear();
+
+            for (int y = 0; y < map.Count; y++)
+            {
+                for (int x = 0; x < map[y].Count; x++)
+                {
+                    switch (map[y][x])
+                    {
+                        case MapObjects.Guard:
+                            canvas.SetBBScaledPixel(x, y, Color.Green);
+                            break;
+
+                        case MapObjects.Visited:
+                            canvas.SetBBScaledPixel(x, y, Color.White);
+                            break;
+
+                        case MapObjects.Obstruction:
+                            canvas.SetBBScaledPixel(x, y, Color.Red);
+                            break;
+                    }
+                }
+            }
+
+            canvas.Render();
+        }
+
         private enum MapObjects
         {
             Guard,
             Obstruction,
-            Air
+            Air,
+            Visited,
         }
 
         private enum GuardDirection
         {
             Up,
+            Right,
             Down,
-            Left,
-            Right
+            Left
         }
     }
 }

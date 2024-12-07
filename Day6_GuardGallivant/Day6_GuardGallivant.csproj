@@ -36,6 +36,9 @@
     <Reference Include="DottedLabel">
       <HintPath>..\DottedLabel\bin\Debug\DottedLabel.dll</HintPath>
     </Reference>
+    <Reference Include="GDIDrawer">
+      <HintPath>.\GDIDrawer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
